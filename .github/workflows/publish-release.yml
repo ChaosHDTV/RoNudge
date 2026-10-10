@@ -1,0 +1,40 @@
+name: Publish release
+
+# The exe is built privately and arrives here on a short-lived branch named upload/<tag> (for example
+# upload/v1.0.0) that carries RoNudge.exe and RELEASE_NOTES.md. This workflow turns that branch into a
+# GitHub Release tagged <tag> on main and then deletes the branch.
+on:
+    push:
+        branches:
+            - "upload/**"
+
+permissions:
+    contents: write
+
+jobs:
+    publish:
+        name: Create release
+        runs-on: ubuntu-latest
+        env:
+            GH_TOKEN: ${{ github.token }}
+
+        steps:
+            - name: Checkout upload branch
+              uses: actions/checkout@v4
+
+            - name: Create release
+              run: |
+                  tag="${GITHUB_REF_NAME#upload/}"
+                  test -f RoNudge.exe || { echo "RoNudge.exe is missing on this branch"; exit 1; }
+                  test -f RELEASE_NOTES.md || echo "RoNudge $tag" > RELEASE_NOTES.md
+                  sha256sum RoNudge.exe > SHA256SUMS.txt
+                  cat SHA256SUMS.txt
+                  gh release create "$tag" RoNudge.exe SHA256SUMS.txt \
+                      --repo "$GITHUB_REPOSITORY" \
+                      --target main \
+                      --title "RoNudge $tag" \
+                      --notes-file RELEASE_NOTES.md
+
+            - name: Delete upload branch
+              if: always()
+              run: git push origin --delete "$GITHUB_REF_NAME"
