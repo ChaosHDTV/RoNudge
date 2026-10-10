@@ -1,0 +1,39 @@
+RoNudge licence
+
+Copyright (c) 2026 ChaosHDTV. All rights reserved.
+
+1. You may download RoNudge and use it free of charge.
+2. You may not modify it, redistribute it, sell it, or reuse any part of it in other software.
+3. You may not present it, or anything made from it, as your own work.
+4. RoNudge is provided "as is", without warranty of any kind. You use it at your own risk; the author is
+   not liable for any damage or loss arising from its use, including action taken against a game account.
+
+The official download is the Releases page of this repository.
+
+
+THIRD-PARTY NOTICE
+
+RoNudge contains code derived from AntiAFK-RBX, which is used under the MIT License. The following notice
+applies to that code.
+
+MIT License
+
+Copyright (c) 2024-2026 Agzes
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
