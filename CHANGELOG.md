@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.1.1
+
+- Fleet Empire: in-game notifications that slide over the members table can no longer end up as members.
+  A row only counts when its rank cell holds a rank; when rows are covered, the page is read again a few
+  seconds later, and a row that stays covered is matched to the known member by its figures or left out
+- Fleet Empire: a delivery or contribution figure far from the member's previous one is recorded as
+  unknown instead of believed; rows recorded through a notification by v1.1.0 are ignored
+
 ## v1.1.0
 
 - Anti-AFK now takes focus more reliably, and never sends input when Roblox could not be focused; such a
