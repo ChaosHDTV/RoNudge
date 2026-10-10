@@ -1,5 +1,33 @@
 # Changelog
 
+## v1.1.0
+
+- Anti-AFK now takes focus more reliably, and never sends input when Roblox could not be focused; such a
+  cycle is reported as failed in the status card, the statistics, the tray tooltip and the Discord webhook
+- New **Session** page: stop anti-AFK after a set running time, optionally closing Roblox or putting the PC
+  to sleep; save and load settings profiles
+- Updates install from inside the app: the download is verified against its published SHA-256 first
+- Reconnect notifications on Discord include a screenshot of the Roblox window
+- Tray tooltip shows the state, the time to the next action and the number of Roblox instances
+- Accent colour can be chosen on the Interface page
+- Help on hover also works inside the settings sub-pages
+- Settings export and import include blur transparency, accent colour and the session limit
+- New **Fleet Empire** page for the Roblox game of that name. It works from screenshots of the game window
+  and ordinary clicks; nothing is injected into the game
+  - Reads the banked balance on a schedule (from every minute), keeps a history, and forecasts when a
+    target is reached from the measured income and the bank interest. The target can be set freely
+  - Posts the balance graph to Discord, as one post that is kept up to date or as a new post per reading,
+    optionally through its own webhook
+  - Reads the corporation's main page on its own schedule: name, reputation, corporation bank, seats and
+    the whole members table
+  - A dashboard window with tabs for balance, corporation and members: graphs that can be zoomed and
+    moved, trend forecasts for reputation and corporation bank, a sortable members table with deliveries
+    and contributions gained over a chosen period, the share of readings in which each member was online,
+    who joined or left, and graphs per member
+  - Optional blocking of your own mouse and keyboard for the few seconds a reading works in the game
+    window (Esc ends it at once)
+  - Needs the English text recognition that ships with Windows 10 and 11
+
 ## v1.0.0
 
 First release.

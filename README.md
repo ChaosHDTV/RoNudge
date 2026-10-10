@@ -27,6 +27,9 @@ release lists the SHA-256 of the exe so you can check a copy before running it.
 - **Automation**: auto-start when Roblox opens, auto-reconnect, macros, global hotkey
 - **Status overlay** and **Discord webhook** notifications
 - **Interface options**: solid or blurred background with adjustable transparency, animations, always on top
+- **Fleet Empire tracker**: reads your banked balance and your corporation's figures and members from the
+  game window, keeps a history, shows graphs with forecasts in a dashboard, and can post the balance graph
+  to Discord
 
 ## Using it
 
