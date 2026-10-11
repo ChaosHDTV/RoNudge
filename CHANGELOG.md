@@ -1,5 +1,77 @@
 # Changelog
 
+## v1.3.0
+
+- Fleet Empire contracts are told apart: what the corporation **hauls** ("You're hauling", also freight of
+  its own businesses) and what it **posted** for others, with the company that picked it up. The Companies
+  view shows both directions: whom the corporation hauled for, and who hauled for it
+- Always on top of the Contracts tab: how many contracts the corporation is hauling right now, the pallets
+  left, the first deadline, the pallets hauled per hour and whether that pace finishes every contract in time
+- New **Pace** view: pallets hauled per hour over time with the members online underneath (the names on
+  hover), the pace needed to finish in time, and the corporation's pace while each member was online against
+  the rest of the time. The pace is recorded from this version on
+- The "We haul" view shows for every running contract the pallets left, its own pace, the time left and
+  when it will be done at that pace
+- Fleet Empire can **apply for contracts by itself** (off unless switched on, in the "We haul" view): it
+  keeps a set number of contracts going (hauled plus applied for) and applies for the best-paying offers
+  of the open board that fit your rules: contract types, the haulers' share, distance and size. It
+  presses Apply a second time when the first press did not take, and leaves a company alone for three hours when the game refuses
+- Contracts: a pay per pallet the page reading missed is read again on its own, a "$" read as a digit is
+  corrected from the total, and tanker freight paid in dollars and cents no longer inflates the total
+- New **Auto-apply** view in the Contracts tab: the rules as switches and steppers, and a record of every
+  application (the tracker's and the ones made by hand) with what became of it: waiting, accepted, not
+  chosen or refused by the game, with the share accepted and the hauler pay of the accepted contracts
+- Fleet Empire now only works while anti-AFK is started: the Start button and the Start / Stop hotkey
+  start and stop everything at once (this can be switched off in the dashboard's top bar). The same button
+  there **pauses** every reading, Discord post and application; the "Read now" buttons still work
+- Auto-apply has a **smallest size**: contracts with fewer pallets are left alone
+- Auto-apply, more rules: a limit on the **pallets still open** over all contracts as an alternative
+  to the number of contracts (a switch chooses which of the two counts), a **minimum time left on the board** to skip offers that have been up for
+  a while, and **withdrawing** the tracker's own application when the poster has not answered after a set
+  time. An offer given up on is not applied for a second time
+- The record of applications shows every contract in full (route, distance, type, pay per pallet, total,
+  share) and how long it waited. An offer is told apart by the time it leaves the board, so a refusal that
+  is tried again stays one entry that counts the attempts; refusals survive a restart of the app
+- Contracts reading: the "show more" button of a long board is found also when its label is misread, the
+  time left on the board is read where it was missed before, offers whose time has run out are shown as
+  expired and never applied for, and a misread arrow no longer turns "Kansas" into "Arkansas"
+- The pace also counts **distance**: pallet-miles per hour (pallets times the miles of their contract), so
+  a long route is not mistaken for slow hauling and a short one does not inflate the figure. The Pace view
+  switches between pallets and pallet-miles, and "done in" is worked out from the pallet-miles left
+- A contract that disappears while its time had not run out counts as **finished** with all its pallets
+  (the game removes it before it ever shows 100 %); one whose time ran out counts as late. "We haul" says
+  which and when, and the Companies view shows per company how many contracts were finished and when the
+  last one was
+- Distances: the figure is read once more with its characters moved apart, which keeps a digit between
+  two others from being lost ("765 mi" read as 76); a "$" read as "5" in the pay is recognised without
+  the total as well
+- **Contracts on Discord**, through a webhook of their own (Webhook page, fourth card): one post with the
+  overview (contracts being hauled, pallets left, pace in pallets and pallet-miles per hour, when it is all
+  done, the pace over the last 24 hours and the day's totals) and below it a post with every contract
+  being hauled: route, pay, share, a progress bar, what is left, time left and when it will be done, plus
+  the offers applied for. Both are kept up to date or posted anew with each reading
+- Contracts reading: the tab bar of the Corporation page is read word by word and the tracker checks that
+  the Contracts page really came up (a click that went astray is repeated); the "show more" button is
+  found from "MORE" with a count beside it, and the reading says so when the board lists more offers
+  than were reached
+- The dashboard has a **Settings** tab with everything for Fleet Empire in one place: when the tracker
+  works, what it reads and how often, the forecast target, and the three Discord posts with their
+  webhooks. The Settings button of the Fleet Empire page in the main window opens it
+- **Stop** (and pausing) now also ends a reading that is under way: the tracker lets go of the game at its
+  next step instead of finishing the corporation, the contracts and the applications first
+- Companies can be set up by hand (click one in the Companies view): **correct its name**, which then
+  also applies to everything read of it later, and choose whether auto-apply takes its offers **first**
+  or **never**. The view also shows how many applications each company accepted
+- Auto-apply can rank the offers by pay per pallet, per pallet-mile or per trip of your truck
+- New **Earnings** view: what the hauling paid day by day, with pallets, pallet-miles, contracts finished
+  and the earnings per measured hour
+- Discord **news** as they happen (application accepted, contract finished or out of time, a contract that
+  will not make it at the present pace, a member away for three days) and a **daily summary** with the
+  first reading of a day; both are switched on in the dashboard's settings
+- A pay per pallet far above everything else on the board with a "5" in front is recognised as a misread
+  dollar sign
+- The settings rows of the Fleet Empire page in the main window are gone; they live in the dashboard
+
 ## v1.2.0
 
 - Fleet Empire: bank interest follows the game's new rule (interest only on the first $50M of the banked balance; the limit is read from the Bank page). Forecast, "income with interest" and the Discord post use it.
