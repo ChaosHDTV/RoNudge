@@ -1,5 +1,47 @@
 # Changelog
 
+## v1.4.0
+
+- **Faster contract readings and applications.** The Contracts tab is scrolled as fast as the page
+  settles instead of with fixed waits, its text is only read where something has to be found, a route's
+  distance is read once and then remembered, and applying goes straight to where a card was instead of
+  going through the whole board again
+- The "show more" button of a long board is found reliably: only the strip at the bottom of the page is
+  read for it (read together with the cards above, its small label was not returned at all)
+- A long board no longer keeps the next reading from getting back to the top of the page
+- Auto-apply says **why** it applied for nothing (in the status line and on its page): which rule turned
+  how many offers away, or that the offers that fit are too large for the room left under the limit
+- A company whose name is cut short on a badge ("We Overtake" for "We Overtake This Game") is no longer
+  taken for a second company with a second contract
+- **Backup and restore** in the dashboard's settings: all settings and everything recorded in one file,
+  and back again (the state before a restore is saved first)
+- The main window is larger (636 x 744 instead of 556 x 520), so its pages show everything without scrolling
+- The dashboard has a **Start / Stop** button in its top bar, the same as in the main window
+- The dashboard has the same glass as the main window (it had none). It has no title bar of the system
+  any more but its own minimise, maximise and close buttons; the strip with the tabs moves it. Windows
+  still sizes, snaps and maximises it like any other window
+- Dashboard settings: how solid the cards are on the glass (30 to 100 %)
+- Webhook page: the two views are a switch under the title; Fleet Empire page: evenly spaced cards with
+  larger figures
+- The Fleet Empire page of the main window shows the contracts as well (being hauled, pallets left, pace,
+  when it is all done, what auto-apply is doing) and what the tracker is doing; its Overview and Settings
+  buttons are gone, the dashboard button remains
+- Webhook, Log events: only the list of what gets logged; the address is set on the Webhooks view
+- Auto-apply: **quiet times** (only with a set number of members online, only between set hours) and
+  **swapping** the weakest waiting application for an offer that is clearly better
+- The pictures of the balance, the reputation and the corporation bank for Discord have the look of the
+  dashboard: a row of tiles with the headline figures (for the balance: income per hour with and without
+  interest and when the target is reached; for the corporation: the day's change, the average per hour
+  and the day's lowest and highest) and the graph in a card
+- The two contract pictures for Discord follow: the overview has a second row for the last 24 hours
+  (pallets hauled, earned for the haulers, contracts finished, pace needed) and rounded bars; every
+  contract being hauled is a card with its progress large, a bar that turns amber when it will be late,
+  and the time left and the verdict as pills
+- The members picture for Discord is new: ordered by the money contributed in the last 24 hours, with the
+  day's totals on top, a bar per member for the day's contribution, the first three set apart, rank tags
+  and the share of the day online. The dashboard's members table sorts by money contributed by default
+- **Export** in the dashboard's settings: contracts, earnings by day, members and applications as CSV
+
 ## v1.3.0
 
 - Fleet Empire contracts are told apart: what the corporation **hauls** ("You're hauling", also freight of
