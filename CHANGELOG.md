@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.4.1
+
+- Fixed a crash when anti-AFK was started again after a stop while Fleet Empire tracking was on: stopping
+  let Windows unload the text recognition, and the next reading called into it
+
 ## v1.4.0
 
 - **Faster contract readings and applications.** The Contracts tab is scrolled as fast as the page
