@@ -7,7 +7,7 @@
 <p align="center">Keeps Roblox sessions from being kicked for inactivity.</p>
 
 <p align="center">
-  <img src="assets/main.png" width="556" alt="RoNudge main window">
+  <img src="assets/main.png" width="636" alt="RoNudge main window">
 </p>
 
 RoNudge sends a small input to each Roblox window on an interval so the 20-minute idle kick never triggers,
@@ -30,6 +30,20 @@ release lists the SHA-256 of the exe so you can check a copy before running it.
 - **Fleet Empire tracker**: reads your banked balance and your corporation's figures and members from the
   game window, keeps a history, shows graphs with forecasts in a dashboard, and can post the balance graph
   to Discord
+
+### Fleet Empire dashboard
+
+<p align="center">
+  <img src="assets/dashboard-balance.png" width="900" alt="Fleet Empire dashboard: banked balance with forecast">
+</p>
+
+<p align="center">
+  <img src="assets/dashboard-contracts.png" width="900" alt="Fleet Empire dashboard: contracts the corporation hauls">
+</p>
+
+<p align="center">
+  <img src="assets/fleet-empire.png" width="636" alt="Fleet Empire page of the main window">
+</p>
 
 ## Using it
 
