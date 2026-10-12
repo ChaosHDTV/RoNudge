@@ -1,5 +1,46 @@
 # Changelog
 
+## v1.4.7
+
+- The contract types have their colours: Box / Van green, Flatbed orange, Tanker blue. As a tag on the open
+  board of the dashboard, in the picture of the contracts being hauled (also on the ones applied for) and
+  on the card of an accepted application; as a coloured square in the text of the contracts post and of the
+  news. Tanker contracts are given in gallons there
+- Every company has a page of its own: a click on it in the Companies table, or on one of its offers on the
+  open board, shows what there has been with it (contracts hauled for it and finished, pallets, what the
+  haulers earned, applications and how many were accepted, how long an answer took, what it hauled of our
+  posts) and lists every contract, offer and application, newest first. Buttons there block the company
+  (auto-apply never applies for its contracts) or prefer it; a right-click anywhere on a company opens the
+  short menu as before
+- Blocked and preferred companies carry a red or green tag in the Companies table, and the offers of a
+  blocked company are greyed on the open board
+- Open board: the column "Pallets" is now "Size" and gives the unit, pallets or gallons, and is wide enough
+  for a tanker contract; "Per pallet" reads "Per unit"
+- A member who is away is reported once per absence, not with every reading; optionally again every so
+  many hours while still away. After how long a member counts as away can be set, in hours or days
+  (Settings, Discord, "News and daily summary": the "Away" button). The news say how long: "Away for 4 days"
+- Box / Van pallets, Flatbed pallets and Tanker gallons are no longer added up. Wherever something other
+  than Box / Van is involved, each type is given in its own unit:
+  - the tiles "Left to haul" and "Per hour" show a line per type with its tag (and are taller for it)
+  - the pace view has a chart per type (Box / Van, Flatbed, Tanker) beside the distance-weighted one, and
+    the table "by who was online" follows the chart chosen
+  - the earnings by day, the companies and their pages, the daily summary and the contracts post name the
+    amounts by type
+- Auto-apply: the limit of open work is set per contract type, in pallets for Box / Van and Flatbed and
+  in gallons for Tanker ("Open load", formerly "Pallets open"); a type only fills its own limit
+- The buttons for the contract types wear their colours (auto-apply rules, the filter of the open board,
+  the pace view)
+- "We haul", "Our posts", the list of applications and the pages of the companies show the type of every
+  contract as a tag in its colour, and amounts with their unit (pallets or gallons)
+- All menus are drawn in the look of the app: dark, rounded, with the accent colour for what is ticked, and
+  submenus that open beside their item (the tray menu, the context menus of members and companies, every
+  dropdown of the dashboard). "Take first" in the auto-apply rules is a dropdown now
+- The contracts overview for Discord, with flatbed or tanker contracts in it: a table by contract type (left
+  to haul, per hour, needed per hour, hauled in 24 hours, each in its unit) in place of the summed tiles,
+  and bars stacked in the colours of the types
+- A click beside an open menu only closes the menu: it no longer also presses what lies under the pointer
+  (a click on a company's row opened its page at the same time)
+
 ## v1.4.6
 
 - The news for Discord are embedded messages in the colour of their kind: accepted and finished in green,
