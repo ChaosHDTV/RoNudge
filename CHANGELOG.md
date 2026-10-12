@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.4.5
+
+- The pictures for Discord come out the same on every computer: on a screen with scaling above 100 % the
+  text was drawn larger than the layout allows, so names and figures were cut off or ran into each other
+- A member's contributed amount is no longer read ten times too high when the small decimal point is lost
+  ("$72.9M" taken as "$729M"): a reading with the point wins, and a jump to ten or a hundred times the
+  last figure has to show in eight readings in a row before it is taken over
+
 ## v1.4.4
 
 - The contracts can be read and applied on by a timer of their own, apart from the corporation reading:
