@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.4.3
+
+- Member figures that were misread no longer stay in the statistics: a figure that does not fit the member's
+  other readings (deliveries and contributed money only ever rise) is left out, also in the history that
+  is already recorded
+- A misread member figure was accepted when the reading before it had been unreadable; it is now compared
+  with the last figure that is known
+- A real jump, such as a large deposit into the corporation bank, is taken over once three readings in a
+  row show it
+- A member recorded under two spellings of the name is shown as one member
+
 ## v1.4.2
 
 - Fixed a crash while saving a corporation reading, which showed up once the members history had grown
