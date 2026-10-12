@@ -2,6 +2,15 @@
 
 ## v1.4.6
 
+- The news for Discord are embedded messages in the colour of their kind: accepted and finished in green,
+  out of time in red, "will not make it" in amber, a member away in grey
+- An accepted application comes with a picture of the contract: pallets, pay per pallet, what the haulers
+  earn and their share, distance, route, type, and how long the answer took
+- The daily summary comes as a picture: the day's figures in tiles and the pallets hauled hour by hour
+- News and summary can go to a webhook of their own (Settings, Discord, "News and summary go to": Paste,
+  Clear, Send test); without one they go along with the contracts as before
+- With the contracts on their own timer, news are posted after each of those readings, not only with the
+  corporation reading
 - Lighter on the computer, which slow ones feel most:
   - text that was recognised once is not recognised again while the picture of it stays the same (a member
     who is offline, an offer still on the board): reading an unchanged members page takes a tenth of the

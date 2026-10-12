@@ -2,7 +2,8 @@ name: Publish release
 
 # The exe is built privately and arrives here on a short-lived branch named upload/<tag> (for example
 # upload/v1.0.0) that carries RoNudge.exe and RELEASE_NOTES.md. This workflow turns that branch into a
-# GitHub Release tagged <tag> on main and then deletes the branch.
+# GitHub Release tagged <tag> on main and then deletes the branch. A release that exists already gets its
+# files and notes replaced.
 on:
     push:
         branches:
@@ -29,11 +30,17 @@ jobs:
                   test -f RELEASE_NOTES.md || echo "RoNudge $tag" > RELEASE_NOTES.md
                   sha256sum RoNudge.exe > SHA256SUMS.txt
                   cat SHA256SUMS.txt
-                  gh release create "$tag" RoNudge.exe SHA256SUMS.txt \
-                      --repo "$GITHUB_REPOSITORY" \
-                      --target main \
-                      --title "RoNudge $tag" \
-                      --notes-file RELEASE_NOTES.md
+                  if gh release view "$tag" --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
+                      # The release exists already: its files and notes are replaced, the tag stays where it is.
+                      gh release upload "$tag" RoNudge.exe SHA256SUMS.txt --repo "$GITHUB_REPOSITORY" --clobber
+                      gh release edit "$tag" --repo "$GITHUB_REPOSITORY" --notes-file RELEASE_NOTES.md
+                  else
+                      gh release create "$tag" RoNudge.exe SHA256SUMS.txt \
+                          --repo "$GITHUB_REPOSITORY" \
+                          --target main \
+                          --title "RoNudge $tag" \
+                          --notes-file RELEASE_NOTES.md
+                  fi
 
             - name: Delete upload branch
               if: always()
