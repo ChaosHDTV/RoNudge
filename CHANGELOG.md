@@ -1,5 +1,25 @@
 # Changelog
 
+## v1.4.4
+
+- The contracts can be read and applied on by a timer of their own, apart from the corporation reading:
+  every 30 seconds to 10 minutes, or continuously, one reading after the other (Settings, "Read the
+  contracts and apply"). Esc gives a reading up and leaves the game alone for a minute
+- Auto-apply rules: the lines between the rows no longer run through the buttons and the small text
+- Settings: the export has moved to the card with the backup
+- Reading the contracts and applying is about a third faster: the offers are read while the page is still
+  being scrolled through, applying follows at once on the open page instead of opening it a second time,
+  and a click on Apply is checked as soon as the card shows it (usually within a second, before: three)
+- Esc gives up a reading at once and frees mouse and keyboard, also while the tracker holds them back
+- The Start/Stop hotkey works while the tracker holds the input back
+- New hotkey Ctrl+Shift+F3: auto-apply on and off, from anywhere and at any moment; switched off, nothing
+  more is pressed, even in the middle of applying
+- The input stays held back for as long as the tracker is at work in the game window (before: 30 seconds
+  from its start), two minutes at most
+- A contracts reading that was stopped half way is thrown away instead of recorded as the whole board
+- In-house contracts the members haul count as hauled by the corporation again (the game now marks them
+  "Hauling in-house"); the ones recorded as posts in the meantime are put right
+
 ## v1.4.3
 
 - Member figures that were misread no longer stay in the statistics: a figure that does not fit the member's
