@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.4.2
+
+- Fixed a crash while saving a corporation reading, which showed up once the members history had grown
+  large (after about a day of tracking)
+
 ## v1.4.1
 
 - Fixed a crash when anti-AFK was started again after a stop while Fleet Empire tracking was on: stopping
