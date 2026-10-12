@@ -7,9 +7,10 @@
 - An accepted application comes with a picture of the contract: pallets, pay per pallet, what the haulers
   earn and their share, distance, route, type, and how long the answer took
 - The daily summary comes as a picture: the day's figures in tiles and the pallets hauled hour by hour
-- News and summary can go to a webhook of their own: a card "News and daily summary" on the Webhook page of
-  the main window, and "News and summary go to" in the dashboard's settings (Paste, Clear, Send test);
-  without one they go along with the contracts as before
+- News and summary can go to a webhook of their own, set like the other posts: a card "News and daily
+  summary" on the Webhook page of the main window and a block of the same name in the dashboard's settings
+  (Paste, Clear, Send test, and the switches for the news and the summary); without one they go along with
+  the contracts as before
 - With the contracts on their own timer, news are posted after each of those readings, not only with the
   corporation reading
 - Lighter on the computer, which slow ones feel most:
