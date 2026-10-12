@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.4.6
+
+- Lighter on the computer, which slow ones feel most:
+  - text that was recognised once is not recognised again while the picture of it stays the same (a member
+    who is offline, an offer still on the board): reading an unchanged members page takes a tenth of the
+    processor time
+  - the text recogniser is set up once per reading instead of for every piece of text
+  - the dashboard no longer draws itself every second: once a second only for the countdown on the Balance
+    tab while it is the window in front, otherwise every ten seconds and when a reading comes in
+  - the captures of a long open board are let go as soon as they are read, instead of all being kept until
+    the end of the reading
+- With auto-apply set to a single contract type and the contracts on their own timer, the open board is
+  set to that type in the game instead of "All": fewer cards to go through, so a reading takes about a
+  third less time. The whole board is still read every ten minutes; in between, the offers of the other
+  types are taken to be still there
+- A pay per pallet read with one digit too many ("$1,331" as 13,311) is put right from the contract's total;
+  such an offer was ranked first by auto-apply
+
 ## v1.4.5
 
 - The pictures for Discord come out the same on every computer: on a screen with scaling above 100 % the
