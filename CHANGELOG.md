@@ -1,5 +1,54 @@
 # Changelog
 
+## v1.4.8
+
+- Corporation leaderboard: the three lists of Corporation > Leaderboard (experience, reputation, value) are
+  read on a timer of their own (Settings, "Read the leaderboard every") and kept as a history
+- A Discord post with a picture for each list, in the look of the members picture: our place and how it
+  moved in about a day, our figure and how much it grew, how far we are behind the place above and ahead
+  of the place below; then the first fifteen with level, figure, change in a day and distance to us (our
+  own row in gold, below them when it is further down). Its own webhook and its own choice of one post kept
+  up to date or a new post each time (Settings, Discord, "Leaderboard")
+- The settings page of the dashboard scrolls when the window is too low for all of it
+- A Leaderboard tab in the dashboard, next to Corporation: our place by reputation, value and experience
+  and how it moved in a day; for reputation and value a chart of our figure against the corporations just
+  above and below, with each line carried on along its trend, the point where we pass the one above or
+  the one below passes us, and our place in seven days at the present trends; the whole list with each
+  corporation's growth per day and its distance to us. "Read leaderboard now" reads it at once
+- The dashboard is much quicker: what it works out from the recorded data (pace, earnings, companies,
+  members, leaderboard) is kept until new data comes in instead of being worked out again for every
+  redraw, the trucks list is only read again when it changes, and the picture goes to the screen the fast
+  way. Scrolling and pointing at things redraw in a fraction of the time they took
+- Our own businesses: Corporation > Businesses is read on a timer of its own (Settings, "Read the
+  businesses every"): for each business the stock against the warehouse space, production per game month
+  (an hour of real time), efficiency, value, upkeep and when it is due, and when it is put up for sale if
+  not used; with the totals of the page. Kept as a history (businesses.csv)
+- A Businesses tab in the dashboard: total value and how it changed, production per hour, the warehouse,
+  the next upkeep; a card per business with its stock as a bar, how the stock changes per hour (production
+  less what is hauled away), when it will be full, and FULL / ALMOST FULL badges; a chart of how full each
+  one was and where it is headed. "Read businesses now" reads it at once
+- A Discord post for the businesses: one picture with the totals and a card per business, in a frame that
+  turns orange when one is nearly full or about to be put up for sale and red when one is full, with a line
+  for each of those. Its own webhook and its own choice of one post kept up to date or a new post each
+  time (Settings, Discord, "Businesses")
+- The leaderboard and the businesses can be read as often as once a minute (also every 2, 5 and 10 minutes)
+- The "Corporation and contracts" block of the settings is tall enough again for all its rows
+- Contracts, "We haul": the contracts being hauled are cards now, each with its type, cargo, company and
+  route, a progress bar, what is left, the pace, the time left and when it will be done, marked IN TIME or
+  TOO LATE AT THIS PACE (the ones applied for show as waiting); the ones before are a table that sorts by
+  any column (click a heading: up, down, back to newest first) with whether each one finished in time
+- Contracts, "Our posts": the same, the running ones as cards (who hauls it, or NOT PICKED UP) and the
+  earlier ones as a sortable table. Both views filter by contract type; a click on a card or row opens the
+  company's page
+- Readings are more accurate: leaderboard values are read once more without the "$" (which runs into the
+  first digit) and cut to the print (a short "$9.6B" alone in a wide cell was often missed), a lost decimal
+  point is put back where the order of the list calls for it, and a figure that still cannot be read is taken
+  from the reading before when it fits between its neighbours. The businesses reader reads the minutes of
+  the upkeep on their own when they go missing, checks the values against the total and the reading before,
+  and takes one more capture past the marketplace so that no card is cut off
+- members.csv no longer grows without end: readings older than two days are thinned to one per member every
+  quarter of an hour when the app starts (the file before is kept as members.csv.bak); loading is quicker
+
 ## v1.4.7
 
 - The contract types have their colours: Box / Van green, Flatbed orange, Tanker blue. As a tag on the open
