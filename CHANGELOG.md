@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.4.9
+
+- Fleet Empire's new look (other font, new layout) is read again. The members table has a second line under the
+  deliveries ("2,608 corp loads"), the Main tab of the corporation is just called "Main", the amounts are set
+  in a lighter face, and the levels in the leaderboard are small blue print. The deliveries are read from the
+  upper line of their cell, the contributed amounts from behind their dollar sign (read many ways, the most
+  voted wins), the rank pill with more tries, the corporation bank as text, the level of a corporation from its
+  digit, and the owned count, the total value and the timers of the businesses at several sizes
+- A contribution whose leading "1" was lost in reading ("$16.2M" as "$6.2M") is put right from the member's last
+  figure instead of being thrown away
+- A business card whose name is scrolled out of view is no longer counted as a second business
+- The new contract type Car Hauler (the "Cars" button of the board): read from the board with its size in cars and
+  its pay per car, purple tag everywhere the other types have theirs, a button on the open board and in the
+  "We haul" views, its own limit and switch in the auto-apply rules (the board is set to "Cars" when it is the
+  only type wanted), its own pace chart, and counted in cars in the tables and the Discord posts. A list of
+  car carriers can be added to trucks.txt under [Car Hauler] for the per-trip figure
+- The amounts hauled and the amount left of tanker and car contracts are read too (they were missed for gallons)
+
 ## v1.4.8
 
 - Corporation leaderboard: the three lists of Corporation > Leaderboard (experience, reputation, value) are
